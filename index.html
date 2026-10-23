@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shyla Rotich | Software Developer & UI/UX</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              500: '#6366f1',
+              600: '#4f46e5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Navigation Header -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="text-xl font-bold tracking-tight text-white hover:text-brand-500 transition-colors">
+        Sheila<span class="text-brand-500">.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#tech" class="hover:text-white transition-colors">Tech Stack</a>
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA Button -->
+      <a href="#contact" class="hidden md:inline-flex bg-brand-500 hover:bg-brand-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all shadow-lg shadow-brand-500/20">
+        Get in Touch
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none focus:text-white">
+        <!-- Hamburger Icon -->
+        <svg id="menu-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Close Icon -->
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-6 py-5 space-y-4">
+      <a href="#about" class="mobile-link block text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">About</a>
+      <a href="#tech" class="mobile-link block text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">Tech Stack</a>
+      <a href="#projects" class="mobile-link block text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">Projects</a>
+      <a href="#contact" class="mobile-link block text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">Contact</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-link block w-full text-center bg-brand-500 hover:bg-brand-600 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-all">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="pt-32 pb-20">
+    
+    <!-- Hero Section -->
+    <!-- Hero Section with Profile Photo -->
+    <section class="max-w-6xl mx-auto px-6 py-16 mb-12 flex flex-col-reverse lg:flex-row items-center gap-12">
+
+      <!-- Left Column: Headline, Bio & CTAs -->
+      <div class="flex-1 text-left">
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          Crafting modern <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">web experiences</span> & intuitive digital products.
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed">
+          Hi, I'm <strong class="text-white">Shyla Rotich</strong> — a Software Developer based in Kenya with a background in Mathematics & Computer Science. Focused on clean frontend architecture, responsive UI design, and building web applications.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#projects" class="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-6 py-3 rounded-xl transition-all shadow-md">
+            Explore My Projects
+          </a>
+          <a href="https://github.com/shyla-gift" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium px-5 py-3 rounded-xl border border-slate-800 transition-all flex items-center gap-2 text-sm">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/shylagiftrotich" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium px-5 py-3 rounded-xl border border-slate-800 transition-all flex items-center gap-2 text-sm">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Professional Profile Photo -->
+      <div class="flex-shrink-0">
+        <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl bg-slate-900">
+          <!-- Make sure 'profile.jpg' matches the name of your saved image file -->
+          <img src="profile.jpg" alt="Shyla Rotich" class="w-full h-full object-cover object-top">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/60">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <!-- Left Side Card -->
+        <div class="md:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 p-8 rounded-3xl border border-slate-800 relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl"></div>
+          
+          <h3 class="text-xs font-mono text-brand-500 uppercase tracking-wider mb-2">At a Glance</h3>
+          <h4 class="text-2xl font-bold text-white mb-6">Sheila Rotich</h4>
+          
+          <ul class="space-y-4 text-sm text-slate-300">
+            <li class="flex items-center gap-3">
+              <span class="p-2 rounded-lg bg-slate-800/80 text-brand-500">🎓</span>
+              <div>
+                <p class="font-medium text-white">BSc Mathematics & Computer Science</p>
+                <p class="text-xs text-slate-400">Kenya Methodist University</p>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="p-2 rounded-lg bg-slate-800/80 text-brand-500">📍</span>
+              <div>
+                <p class="font-medium text-white">Location</p>
+                <p class="text-xs text-slate-400">Kenya</p>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="p-2 rounded-lg bg-slate-800/80 text-brand-500">🚀</span>
+              <div>
+                <p class="font-medium text-white">Focus</p>
+                <p class="text-xs text-slate-400">Frontend Web Dev & UI/UX Design</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side Narrative -->
+        <div class="md:col-span-7">
+          <h2 class="text-xs uppercase font-semibold tracking-widest text-brand-500 mb-2">My Story</h2>
+          <h3 class="text-3xl font-bold text-white sm:text-4xl mb-6">Building logical, user-centered software</h3>
+          
+          <div class="space-y-4 text-slate-400 leading-relaxed text-sm sm:text-base">
+            <p>
+              With a background in <strong class="text-slate-200">Mathematics & Computer Science</strong>, I naturally approach problems through analytical thinking and clean logic. I enjoy turning complex problems into intuitive, user-friendly digital tools.
+            </p>
+            <p>
+              My journey includes hands-on experience in leadership as Vice President of the Young Tech Kenya Computer Club, along with customer relations and IT attachment experience. 
+            </p>
+            <p>
+              Currently, I am focused on mastering modern web frontend development with modern tools like Tailwind CSS, modern JavaScript, and React, while crafting accessible interfaces.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <!-- Tech Stack Section -->
+    <section id="tech" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/60">
+      
+      <!-- Section Header -->
+      <div class="mb-12">
+        <h2 class="text-xs uppercase font-semibold tracking-widest text-brand-500 mb-2">My Toolkit</h2>
+        <h3 class="text-3xl font-bold text-white sm:text-4xl">Skills & Technical Proficiency</h3>
+        <p class="mt-3 text-slate-400 max-w-xl text-sm sm:text-base leading-relaxed">
+          Languages, frameworks, and developer tools across Web, Backend, and Mobile platforms.
+        </p>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Category 1: Frontend & UI -->
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="p-2.5 rounded-xl bg-brand-500/10 text-brand-500 font-mono text-sm font-bold">&lt;/&gt;</span>
+            <h4 class="text-lg font-bold text-white">Frontend & UI</h4>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">HTML5 & CSS3</p>
+                <p class="text-xs text-slate-400">Semantic Markup & Responsive Layouts</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20">Core</span>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">Tailwind CSS</p>
+                <p class="text-xs text-slate-400">Utility-First Styling & Dark Mode</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Proficient</span>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">JavaScript (ES6+)</p>
+                <p class="text-xs text-slate-400">DOM Manipulation & Dynamic Logic</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20">Core</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Backend & APIs -->
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="p-2.5 rounded-xl bg-brand-500/10 text-brand-500 font-mono text-sm font-bold">⚡</span>
+            <h4 class="text-lg font-bold text-white">Backend & APIs</h4>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">PHP & Laravel</p>
+                <p class="text-xs text-slate-400">MVC Architecture & Web Apps</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Proficient</span>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">Firebase DB & Auth</p>
+                <p class="text-xs text-slate-400">Real-time Data & Authentication</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">Working Knowledge</span>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">REST APIs</p>
+                <p class="text-xs text-slate-400">Data Fetching & Integrations</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">Working Knowledge</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Mobile & Tools -->
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="p-2.5 rounded-xl bg-brand-500/10 text-brand-500 font-mono text-sm font-bold">📱</span>
+            <h4 class="text-lg font-bold text-white">Mobile & Tools</h4>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">Flutter & Dart</p>
+                <p class="text-xs text-slate-400">Cross-Platform Mobile Apps</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Working Knowledge</span>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">Git & GitHub</p>
+                <p class="text-xs text-slate-400">Version Control & Workflows</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Proficient</span>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-white">Figma & Tooling</p>
+                <p class="text-xs text-slate-400">UI Mockups & Developer Tools</p>
+              </div>
+              <span class="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Proficient</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/60">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="text-xs uppercase font-semibold tracking-widest text-brand-500 mb-2">Work & Learning</h2>
+          <h3 class="text-3xl font-bold text-white sm:text-4xl">Featured Projects</h3>
+        </div>
+        <p class="mt-3 md:mt-0 text-slate-400 max-w-md text-sm">
+          A showcase of what I'm building as I sharpen my web development skills in 2026.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-brand-500/10 text-brand-500 border border-brand-500/20">Live Project</span>
+              <span class="text-xs text-slate-500">2026</span>
+            </div>
+            <h4 class="text-xl font-bold text-white group-hover:text-brand-500 transition-colors">Developer Portfolio 2026</h4>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              A modern, dark-themed personal portfolio built with HTML5, Tailwind CSS, and vanilla JavaScript. Features glassmorphism, responsive navigation, and semantic markup.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">HTML5</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">Tailwind CSS</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">JavaScript</span>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://github.com/shyla-gift/Myportfolio" target="_blank" class="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5">
+              Source Code &rarr;
+            </a>
+            <span class="text-emerald-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Active
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="p-6 rounded-3xl bg-slate-900/40 border border-dashed border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">In Progress</span>
+              <span class="text-xs text-slate-500">Upcoming</span>
+            </div>
+            <h4 class="text-xl font-bold text-white">Interactive Utility Application</h4>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              An upcoming dynamic web application designed to handle real-time state, user input, and browser storage using modern JavaScript ES6+.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/50 text-slate-400 font-mono">JavaScript ES6+</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/50 text-slate-400 font-mono">DOM Storage</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/50 text-slate-400 font-mono">REST API</span>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-800/80 text-xs font-medium text-slate-500">
+            Currently in design phase
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-800/60">
+      <div class="mb-12 text-center max-w-2xl mx-auto">
+        <h2 class="text-xs uppercase font-semibold tracking-widest text-brand-500 mb-2">Let's Connect</h2>
+        <h3 class="text-3xl font-bold text-white sm:text-4xl">Get In Touch</h3>
+        <p class="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
+          Whether you have a project idea, job opportunity, or just want to connect — feel free to reach out!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Side Social Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          <a href="mailto:shylarotich@gmail.com" class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 transition-all flex items-center gap-4 group">
+            <div class="p-3 rounded-xl bg-brand-500/10 text-brand-500 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 font-mono">Direct Email</p>
+              <p class="text-sm font-semibold text-white group-hover:text-brand-500 transition-colors">shilahchep1@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/shylagiftrotich" target="_blank" class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 transition-all flex items-center gap-4 group">
+            <div class="p-3 rounded-xl bg-sky-500/10 text-sky-400 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 font-mono">LinkedIn Profile</p>
+              <p class="text-sm font-semibold text-white group-hover:text-brand-500 transition-colors">Sheila Rotich</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/shyla-gift" target="_blank" class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/50 transition-all flex items-center gap-4 group">
+            <div class="p-3 rounded-xl bg-slate-800 text-slate-200 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 font-mono">GitHub Profile</p>
+              <p class="text-sm font-semibold text-white group-hover:text-brand-500 transition-colors">@shyla-gift</p>
+            </div>
+          </a>
+
+          <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/80 flex items-center gap-4">
+            <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 font-mono">Location</p>
+              <p class="text-sm font-semibold text-slate-300">Kenya (Remote / Worldwide)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="lg:col-span-7 bg-slate-900/60 p-8 rounded-3xl border border-slate-800">
+          <form action="https://formspree.io/f/xgaaegeg" method="POST" id="contact-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-xs font-medium text-slate-300 mb-2">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-500 transition-colors">
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-medium text-slate-300 mb-2">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-500 transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-medium text-slate-300 mb-2">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-500 transition-colors">
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-medium text-slate-300 mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Hi Sheila, I'd like to discuss..." required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brand-500 transition-colors resize-none"></textarea>
+            </div>
+
+            <div id="form-feedback" class="hidden text-xs p-3 rounded-xl border"></div>
+
+            <button type="submit" id="submit-btn" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-brand-500/20 text-sm">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-slate-500">
+        &copy; 2026 Sheila Rotich. Built with HTML, Tailwind CSS & JavaScript.
+      </p>
+      <div class="flex items-center space-x-6 text-xs text-slate-400">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#tech" class="hover:text-white transition-colors">Tech Stack</a>
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+   // Contact Form Submission with Formspree
+    const contactForm = document.getElementById('contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // 1. Show loading state on button
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Sending...';
+
+        // 2. Prepare form data
+        const formData = new FormData(contactForm);
+
+        try {
+          // 3. Send data to Formspree endpoint
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            // Success Feedback
+            formFeedback.classList.remove('hidden', 'bg-red-500/10', 'text-red-400', 'border-red-500/20');
+            formFeedback.classList.add('bg-emerald-500/10', 'text-emerald-400', 'border-emerald-500/20');
+            formFeedback.innerText = 'Thank you! Your message has been received. I will get back to you shortly.';
+            contactForm.reset();
+          } else {
+            // Formspree error
+            throw new Error('Network response was not ok');
+          }
+        } catch (error) {
+          // Error Feedback
+          formFeedback.classList.remove('hidden', 'bg-emerald-500/10', 'text-emerald-400', 'border-emerald-500/20');
+          formFeedback.classList.add('bg-red-500/10', 'text-red-400', 'border-red-500/20');
+          formFeedback.innerText = 'Oops! There was a problem sending your message. Please try again.';
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Send Message';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
